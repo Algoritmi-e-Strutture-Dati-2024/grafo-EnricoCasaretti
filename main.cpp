@@ -48,5 +48,11 @@ int main() {
         std::cout << nodo1 << " e " << nodo2 << " non sono connessi.\n";
     }
 
+    grafo.arcoMinimo("Istanbul");
+
+
+    grafo.arcoMinimo("Alessandria");
+
+
     return 0;
 }
