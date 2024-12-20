@@ -127,6 +127,18 @@ public:
         }
         return matriceAdiacenza[indiceSorgente][indiceDestinazione] != INF;
     }
+
+    bool connessi(const T& nodo1, const T& nodo2) {
+    int indice1 = trovaIndice(nodo1);
+    int indice2 = trovaIndice(nodo2);
+
+    if (indice1 == -1 || indice2 == -1) {
+        std::cout << "Errore: uno o entrambi i nodi non esistono.\n";
+        return false;
+    }
+
+    return matriceAdiacenza[indice1][indice2] != INF;
+}
     
 private:
     // Trova l'indice di un nodo
